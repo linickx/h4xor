@@ -271,11 +271,13 @@ body {
 
 .narrowcolumn .postmetadata {
 	padding-top: 5px;
-	}
+	clear: both;
+}
 
 .widecolumn .postmetadata {
 	margin: 30px 0;
-	}
+	clear: both;
+}
 	
 #footer {
 	padding: 0 0 0 1px;
@@ -324,10 +326,11 @@ h3 {
 	margin: 30px 0 0;
 	}
 
-h3.comments {
+h3#comments, h3#respond {
 	padding: 0;
 	margin: 40px auto 20px ;
-	}
+	clear: both;
+}
 /* End Headers */
 
 
@@ -368,6 +371,35 @@ img.alignleft {
 .alignleft {
 	float: left
 	}
+
+.narrowcolumn .aligncenter {
+	display: block;
+	clear: both;
+	margin-left: auto;
+	margin-right: 0;
+}
+
+.aligncenter {
+	display: block;
+	clear: both;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption {
+  border: 1px solid;
+  padding: 4px;
+  margin: 2px;
+}
+
+.wp-caption-text {
+  margin: 0px;
+}
+
+.entry .wp-caption img,
+.entrytext .wp-caption img {
+  padding: 2px;
+}
 /* End Images */
 
 
