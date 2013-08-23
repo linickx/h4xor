@@ -61,7 +61,7 @@
 <div id="header">
 	<div id="headerimg">
 		<h1><a href="<?php echo get_settings('home'); ?>"><?php bloginfo('name'); ?></a></h1>
-		<div class="description"><?php bloginfo('description'); ?></div>
+		<div class="description"><span><?php bloginfo('description'); ?></span></div>
 	</div>
 </div>
 <?php 
