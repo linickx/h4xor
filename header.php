@@ -41,7 +41,7 @@
 				If you don't want to use the template's images, you can also delete the following two lines. */
 			
 			#header 	{ margin: 0 !important; margin: 0 0 0 1px; padding: 1px; height: 198px; width: 758px; }
-			#headerimg 	{ margin: 7px 9px 0; height: 192px; width: 740px; } 
+			#headerimg 	{ margin: 3px 3px 0px 4px; height: 192px; width: auto; } 
 		/* END IMAGE CSS */
 		
 	
@@ -62,6 +62,11 @@
 	<div id="headerimg">
 		<h1><a href="<?php echo get_settings('home'); ?>"><?php bloginfo('name'); ?></a></h1>
 		<div class="description"><span><?php bloginfo('description'); ?></span></div>
+		<?php if (get_option('haxor_header_menu_enable', true)) : ?>
+			<nav id="site-navigation" class="main-navigation" role="navigation">
+				<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'sort_column' => 'menu_order', 'container_class' => 'menu-header'  ) ); ?>
+			</nav><!-- #site-navigation -->
+		<?php endif; ?>
 	</div>
 </div>
 <?php 

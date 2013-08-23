@@ -256,7 +256,8 @@ body {
 	margin: 0;
 	height: 200px;
 	width: 100%;
-	}
+	position: relative;
+}
 
 .narrowcolumn {
 	float: left;
@@ -708,6 +709,38 @@ a img {
 }
 
 /* - end gallery - */
+
+/* - begin menu - */
+
+#site-navigation {
+  display: block;
+  background: rgba(0,32,0,0.7);
+/*  margin-top: 30px;*/
+  position: absolute;
+  top: 165px;
+  width: 100%;
+}
+
+.main-navigation ul {
+  margin: 0px;
+}
+
+.main-navigation li {
+  display: inline-block;
+  margin: 0px 10px;
+}
+
+.main-navigation a {
+  font: 1.5em 'courier';
+  text-decoration: none;
+  color: #fff;
+}
+
+.main-navigation a:hover {
+  text-decoration: underline;
+  color: #0f0;
+}
+/* - end menu - */
 
 /* -- Silly Stuff --- */
 
