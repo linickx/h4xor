@@ -686,7 +686,7 @@ a img {
 	border-color: #00ff00;
 }
 
-.g2-thumb a:hover img, .entry a:hover img, .entrytext a img {
+.g2-thumb a:hover img, .entry a:hover img, .entrytext a:hover img {
 	border-width: 2px;
 	border-color: #ffffff;
 	margin: 0;
