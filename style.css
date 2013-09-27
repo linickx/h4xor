@@ -424,21 +424,25 @@ img.alignleft {
 	Special stylized non-IE bullets
 	Do not work in Internet Explorer, which merely default to normal bullets. */
 
-html>body .entry ul {
+html>body .entry ul,
+html>body .entrytext ul {
 	margin-left: 0px;
 	padding: 0 0 0 30px;
 	list-style: none;
 	padding-left: 10px;
 	text-indent: -10px;
-	} 
+} 
 
-html>body .entry li {
+html>body .entry li,
+html>body .entrytext li  {
 	margin: 7px 0 8px 10px;
-	}
+}
 
-.entry ul li:before, #sidebar ul ul li:before {
+.entry ul li:before,
+.entrytext ul li:before,
+#sidebar ul ul li:before {
 	content: "# ";
-	}
+}
 
 
 .entry ol {
