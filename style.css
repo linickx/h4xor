@@ -744,6 +744,33 @@ a img {
   text-decoration: underline;
   color: #0f0;
 }
+
+.main-navigation li:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.main-navigation li .sub-menu {
+  display: none;
+}
+
+.main-navigation li:hover .sub-menu {
+  display: block;
+  position: absolute;
+  padding: 0px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgb(0, 64, 0);
+  border-top: 0px;
+}
+
+.sub-menu li {
+  margin: 0px;
+  padding: 3px;
+}
+
+.sub-menu li:hover {
+  background-color: rgba(0, 32, 0, 0.5);
+}
+
 /* - end menu - */
 
 /* -- Silly Stuff --- */
