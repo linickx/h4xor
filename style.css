@@ -17,7 +17,7 @@ Author URI: http://www.linickx.com/
 	Have fun, and don't be afraid to contact me if you have questions.
 */
 
-
+@import url(https://fonts.googleapis.com/css?family=Electrolize);
 
 /* Begin Typography & Colors */
 body {
@@ -90,6 +90,12 @@ h1 {
 	text-align: center;
 	}
 
+.description > span {
+  background: rgba(0,0,0,0.5);
+  font-weight: bold;
+  padding: 1px;
+}
+
 h2 {
 	font-size: 1.6em;
 	}
@@ -111,7 +117,12 @@ h3 {
 h1, h1 a, h1 a:hover, h1 a:visited, .description {
 	text-decoration: none;
 	color: white;
-	}
+}
+
+h1, h1 a, h1 a:hover, h1 a:visited {
+	font-family: Electrolize, Arial, Helvetica, Sans-Serif;
+    font-weight: normal;
+}
 
 h2, h2 a, h2 a:visited, h3, h3 a, h3 a:visited {
 	color: white;
@@ -245,7 +256,8 @@ body {
 	margin: 0;
 	height: 200px;
 	width: 100%;
-	}
+	position: relative;
+}
 
 .narrowcolumn {
 	float: left;
@@ -271,14 +283,15 @@ body {
 
 .narrowcolumn .postmetadata {
 	padding-top: 5px;
-	}
+	clear: both;
+}
 
 .widecolumn .postmetadata {
 	margin: 30px 0;
-	}
+	clear: both;
+}
 	
 #footer {
-	padding: 0 0 0 1px;
 	margin: 0 auto;
 	width: 760px;
 	clear: both;
@@ -297,9 +310,13 @@ body {
 
 /*	Begin Headers */
 h1 {
-	padding-top: 70px;
+	padding-top: 40px;
 	margin: 0;
-	}
+}
+
+#headerimg h1 a {
+    font-size: 2em;
+}
 
 .description {
 	text-align: center;
@@ -324,10 +341,11 @@ h3 {
 	margin: 30px 0 0;
 	}
 
-h3.comments {
+h3#comments, h3#respond {
 	padding: 0;
 	margin: 40px auto 20px ;
-	}
+	clear: both;
+}
 /* End Headers */
 
 
@@ -368,6 +386,35 @@ img.alignleft {
 .alignleft {
 	float: left
 	}
+
+.narrowcolumn .aligncenter {
+	display: block;
+	clear: both;
+	margin-left: auto;
+	margin-right: 0;
+}
+
+.aligncenter {
+	display: block;
+	clear: both;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption {
+  border: 1px solid;
+  padding: 4px;
+  margin: 2px;
+}
+
+.wp-caption-text {
+  margin: 0px;
+}
+
+.entry .wp-caption img,
+.entrytext .wp-caption img {
+  padding: 2px;
+}
 /* End Images */
 
 
@@ -377,21 +424,25 @@ img.alignleft {
 	Special stylized non-IE bullets
 	Do not work in Internet Explorer, which merely default to normal bullets. */
 
-html>body .entry ul {
+html>body .entry ul,
+html>body .entrytext ul {
 	margin-left: 0px;
 	padding: 0 0 0 30px;
 	list-style: none;
 	padding-left: 10px;
 	text-indent: -10px;
-	} 
+} 
 
-html>body .entry li {
+html>body .entry li,
+html>body .entrytext li  {
 	margin: 7px 0 8px 10px;
-	}
+}
 
-.entry ul li:before, #sidebar ul ul li:before {
+.entry ul li:before,
+.entrytext ul li:before,
+#sidebar ul ul li:before {
 	content: "# ";
-	}
+}
 
 
 .entry ol {
@@ -654,7 +705,7 @@ a img {
 	border-color: #00ff00;
 }
 
-.g2-thumb a:hover img, .entry a:hover img, .entrytext a img {
+.g2-thumb a:hover img, .entry a:hover img, .entrytext a:hover img {
 	border-width: 2px;
 	border-color: #ffffff;
 	margin: 0;
@@ -662,6 +713,65 @@ a img {
 }
 
 /* - end gallery - */
+
+/* - begin menu - */
+
+#site-navigation {
+  display: block;
+  background: rgba(0,32,0,0.7);
+/*  margin-top: 30px;*/
+  position: absolute;
+  top: 165px;
+  width: 100%;
+}
+
+.main-navigation ul {
+  margin: 0px;
+}
+
+.main-navigation li {
+  display: inline-block;
+  margin: 0px 10px;
+}
+
+.main-navigation a {
+  font: 1.5em 'courier';
+  text-decoration: none;
+  color: #fff;
+}
+
+.main-navigation a:hover {
+  text-decoration: underline;
+  color: #0f0;
+}
+
+.main-navigation li:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.main-navigation li .sub-menu {
+  display: none;
+}
+
+.main-navigation li:hover .sub-menu {
+  display: block;
+  position: absolute;
+  padding: 0px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgb(0, 64, 0);
+  border-top: 0px;
+}
+
+.sub-menu li {
+  margin: 0px;
+  padding: 3px;
+}
+
+.sub-menu li:hover {
+  background-color: rgba(0, 32, 0, 0.5);
+}
+
+/* - end menu - */
 
 /* -- Silly Stuff --- */
 

@@ -30,7 +30,7 @@
 				and not in the wp-layout.css file. If you prefer to use only CSS for colors and what
 				not, then go right ahead and delete the following lines, and the image files. */
 			
-		body	 	{ background: url("<?php bloginfo('stylesheet_directory'); ?>/images/bgcolor.jpg"); }	<?php /* Checks to see whether it needs a sidebar or not */ if ((! $withcomments) && (! is_single()) && (! is_page())) { ?>
+		body	 	{ background: url("<?php bloginfo('stylesheet_directory'); ?>/images/bgcolor.jpg"); }	<?php /* Checks to see whether it needs a sidebar or not */ if ((! $withcomments) && (! is_single())) { ?>
 			#page		{ background: url("<?php bloginfo('stylesheet_directory'); ?>/images/bg.jpg") repeat-y top; border: none; } <?php } else { // No sidebar ?>
 			#page		{ background: url("<?php bloginfo('stylesheet_directory'); ?>/images/bgwide.jpg") repeat-y top; border: none; } <?php } ?>
 			#header 	{ background: url("<?php bloginfo('stylesheet_directory'); ?>/images/header.jpg") no-repeat bottom center; }
@@ -41,7 +41,7 @@
 				If you don't want to use the template's images, you can also delete the following two lines. */
 			
 			#header 	{ margin: 0 !important; margin: 0 0 0 1px; padding: 1px; height: 198px; width: 758px; }
-			#headerimg 	{ margin: 7px 9px 0; height: 192px; width: 740px; } 
+			#headerimg 	{ margin: 3px 3px 0px 4px; height: 192px; width: auto; } 
 		/* END IMAGE CSS */
 		
 	
@@ -61,7 +61,12 @@
 <div id="header">
 	<div id="headerimg">
 		<h1><a href="<?php echo get_settings('home'); ?>"><?php bloginfo('name'); ?></a></h1>
-		<div class="description"><?php bloginfo('description'); ?></div>
+		<div class="description"><span><?php bloginfo('description'); ?></span></div>
+		<?php if (get_option('haxor_header_menu_enable', true)) : ?>
+			<nav id="site-navigation" class="main-navigation" role="navigation">
+				<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'sort_column' => 'menu_order', 'container_class' => 'menu-header'  ) ); ?>
+			</nav><!-- #site-navigation -->
+		<?php endif; ?>
 	</div>
 </div>
 <?php 
